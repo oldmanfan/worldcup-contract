@@ -85,6 +85,9 @@ function printAllMatches(m: any[]) {
         scoreGuessRecords:
             ${showRecords(mat[14])}
 
+        isPaused: ${mat[15]}
+        -----------------------------------------------
+
         `)
     }
 }

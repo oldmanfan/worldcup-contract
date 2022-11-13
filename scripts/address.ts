@@ -11,7 +11,7 @@ import { ethers } from "hardhat";
 export const Address = {
     token: "0xE9505ed0712e075E24aD4Cf1cB3Af4350EA78c4C",
     wc: "0x166760410792e2df04749EDa81d1243BA02961B9",
-    lens: "0xEd1DF85808F2d32b6cDd57fc10Cee7cf746a42d3"
+    lens: "0x34DEaEFF1D932d01E2962D2628c47AC2D6182017"
 }
 
 export const vault =   {

@@ -51,6 +51,8 @@ contract WorldCupLens {
 
         BetRecord[] winloseRecords; // player猜输赢的下单
         BetRecord[] scoreGuessRecords; // player猜比分的下单
+
+        bool isPaused;
     }
 
     function getGuessPoolInfo(address poolAddr) private view returns(GuessPool memory) {
@@ -127,6 +129,8 @@ contract WorldCupLens {
             result.winloseRecords = getGuessRecord(mat, address(mat.winLose()), player);
             result.scoreGuessRecords = getGuessRecord(mat, address(mat.scoreGuess()), player);
         }
+
+        result.isPaused = mat.paused();
 
         return result;
     }

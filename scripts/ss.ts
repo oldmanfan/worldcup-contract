@@ -5,11 +5,11 @@ import { Signer } from "@ethersproject/abstract-signer";
 
 const BN = ethers.BigNumber;
 
-async function startMatch(a: number, b: number, dd: number) {
+async function startMatch(a: number, b: number, matchStartDelay: number) {
     const [owner] = await ethers.getSigners();
     const now = Math.floor((new Date()).getTime() / 1000);
 
-    const offset = Math.floor(dd * 3600);
+    const offset = Math.floor(matchStartDelay * 3600);
     const matchStart = now + offset;
     const matchEnd = matchStart + 30 * 60;
 
@@ -101,6 +101,12 @@ async function main() {
     // await startMatch(9, 10, 20);  // 未来
     // await startMatch(11, 12, 20); // 未来
 
+    // await startMatch(13, 14, 0.45);
+    // await startMatch(15, 16, 0.45);
+
+    // await startMatch(17, 18, 3);  // 未来
+    // await startMatch(19, 20, 3); // 未来
+
 
     // await guess(player1, 3, GuessType.GUESS_WINLOSE_A_WIN, 10000);
     // await guess(player2, 3, GuessType.GUESS_SCORE_34, 15000);
@@ -117,7 +123,7 @@ async function main() {
     // await setScores(5, 6, 1);
     // await setScores(6, 2, 0);
 
-    await allMatchs();
+    // await allMatchs();
 
     // await claimReward(player1, 3, "1161995860596616152391849729530928935249637440387407");
     // await claimReward(player1, 4, "1539063283027989105288400416371729954320868036475215"); // not win bet
@@ -130,7 +136,7 @@ async function main() {
     // await TTBalance(vault.address);
 
     const tt = await ethers.getContractAt("MockTT", Address.token);
-    let tx = await tt.mint("0xbf731f7e7B3F9ff3164Ba2113A143E7A8b481aDb", BN.from("100000000000000000000000000"));
+    let tx = await tt.mint("0xa3f45b3Ab5fF54D24d61c4ea3f39cc98eBCb3c7E", BN.from("100000000000000000000000000"));
     await tx.wait();
 }
 
