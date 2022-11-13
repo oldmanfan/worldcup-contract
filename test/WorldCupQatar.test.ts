@@ -151,7 +151,7 @@ describe("WorldCupQatar", function () {
     await ethers.provider.send("evm_mine", []);
 
     await expect(wc.connect(player1).guess(1, GuessType.GUESS_SCORE_02, TT("10"))).to.revertedWith("match is not betable");
-    await expect(wc.connect(owner).setScores(1, 2, 3)).to.revertedWith("match is not end");
+    // await expect(wc.connect(owner).setScores(1, 2, 3)).to.revertedWith("match is not end");
 
     let betId = await winlose.sequenceRecords(1);
     await expect(wc.connect(player1).claimReward(1, betId)).to.revertedWith("match is not finished");
@@ -163,6 +163,7 @@ describe("WorldCupQatar", function () {
     await expect(wc.connect(player1).claimReward(1, betId)).to.revertedWith("match is not finished");
 
     await wc.connect(owner).setScores(1, 3, 2);
+    await wc.connect(owner).setMatchFinished(1);
 
     let failBetId = await winlose.sequenceRecords(2);
     await expect(wc.connect(player1).claimReward(1, failBetId)).to.revertedWith("claimer not match better");
@@ -235,6 +236,11 @@ describe("WorldCupQatar", function () {
     await wc.connect(owner).setScores(3, 3, 2);
     await wc.connect(owner).setScores(4, 4, 3);
 
+    await wc.connect(owner).setMatchFinished(1);
+    await wc.connect(owner).setMatchFinished(2);
+    await wc.connect(owner).setMatchFinished(3);
+    await wc.connect(owner).setMatchFinished(4);
+
     let mat = await ethers.getContractAt("Match", await wc.matches(2));
     let winlose = await ethers.getContractAt("WinLoseGuess", await mat.winLose());
     let scoreguess = await ethers.getContractAt("ScoreGuess", await mat.scoreGuess());
@@ -299,6 +305,8 @@ describe("WorldCupQatar", function () {
     await ethers.provider.send("evm_mine", []);
 
     await wc.connect(owner).setScores(1, 3, 2);
+    await wc.connect(owner).setMatchFinished(1);
+
     await expect(wc.nobodyWin(1, GuessType.GUESS_WINLOSE_DRAW)).to.revertedWith("somebody win");
 
     await wc.connect(owner).setScores(1, 3, 3);

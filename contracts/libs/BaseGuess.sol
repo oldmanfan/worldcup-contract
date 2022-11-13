@@ -18,7 +18,7 @@ contract BaseGuess {
     uint256 public matchId;
 
     uint256 public totalSeq;
-    mapping(uint256 => uint256) public sequenceRecords; // seq matchId => betId
+    mapping(uint256 => uint256) public sequenceRecords; // seq betIndex => betId
 
     uint256 public immutable POOL_COUNT;
     uint256 public immutable GUESS_TYPE_START;

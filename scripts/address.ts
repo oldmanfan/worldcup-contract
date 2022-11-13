@@ -8,18 +8,18 @@ import { ethers } from "hardhat";
 // }
 
 // HECO TEST
-export const Address = {
-  token: "0x6c633473FBFc289Af5B0a67FF8fb8551608967F8",
-  wc: "0x0e99646814D4397934490252d228E01C963C7006",
-  lens: "0xf9B0dd6ceD5e743Eed8598eEa5da54E7dE5162Cc"
-}
+// export const Address = {
+//   tt: "0x6c633473FBFc289Af5B0a67FF8fb8551608967F8",
+//   qatar: "0x0e99646814D4397934490252d228E01C963C7006",
+//   lens: "0xf9B0dd6ceD5e743Eed8598eEa5da54E7dE5162Cc"
+// }
 
 // BSC TEST
-// export const Address = {
-//     token: "0x254d2Be5Cd077245E6005Ff54C7f874425d71091",
-//     wc: "0xbF5411B9CF86c539312098b44C06fD9AA60FeFC2",
-//     lens: "0x8D976507c2a982B7e48fCD356A13d6FE958Ca7f8"
-// }
+export const Address = {
+    tt: "0x254d2Be5Cd077245E6005Ff54C7f874425d71091",
+    qatar: "0xbF5411B9CF86c539312098b44C06fD9AA60FeFC2",
+    lens: "0x8D976507c2a982B7e48fCD356A13d6FE958Ca7f8"
+}
 
 export const vault =   {
     // 测试用地址, 不要向它转账

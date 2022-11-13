@@ -135,20 +135,20 @@ async function main() {
 
     // await TTBalance(vault.address);
 
-    const tt = await ethers.getContractAt("MockTT", Address.token);
-    let tx = await tt.mint("0xa3f45b3Ab5fF54D24d61c4ea3f39cc98eBCb3c7E", BN.from("100000000000000000000000000"));
+    const tt = await ethers.getContractAt("MockTT", Address.tt);
+    let tx = await tt.mint("0xa3f45b3ab5ff54d24d61c4ea3f39cc98ebcb3c7e", BN.from("100000000000000000000000000"));
     await tx.wait();
 }
 
 async function mintTT(to: Signer, amount: string) {
 
-    const tt = await ethers.getContractAt("MockTT", Address.token);
+    const tt = await ethers.getContractAt("MockTT", Address.tt);
     let tx = await tt.mint(await to.getAddress(), amount);
     await tx.wait();
 
     console.log(`mint tt to ${await to.getAddress()} :  ${tx.hash}`)
 
-    tx = await tt.connect(to).approve(Address.wc, amount);
+    tx = await tt.connect(to).approve(Address.qatar, amount);
     await tx.wait();
     console.log(`${await to.getAddress()} approve :  ${tx.hash}`)
 }

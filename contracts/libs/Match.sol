@@ -16,7 +16,9 @@ contract Match {
     uint256 public guessEndTime;
     address public payToken;  // pay erc20 token
     uint256 public finalScores; // 最终比分:   (finalScores & 0xff00) : (finalScores & 0xff )
+    bool    public matchFinished; // 比赛最终确定, 可以领取奖励
     bool    public paused;  // status of the match, if paused or not
+
 
     address public factory;
 
@@ -80,7 +82,7 @@ contract Match {
     }
 
     function finished() public view returns(bool) {
-        return finalScores != 0xffffff;
+        return finalScores != 0xffffff && matchFinished;
     }
 
     function recallable() public view returns(bool) {
@@ -202,6 +204,12 @@ contract Match {
         // composite final scores
         finalScores = (((scoresA & 0xff) << 8) | (scoresB & 0xff));
     }
+
+    function setMatchFinished() public onlyFactory {
+        require(finalScores != 0xffffff, "scores not set");
+        matchFinished = true;
+    }
+
     // 暂停比赛
     function pause(bool status) public onlyFactory {
         paused = status;

@@ -89,11 +89,19 @@ contract WorldCupQatar is AccessControl {
 
         vault = _vault;
     }
+
     // 设置拥有setting权限的账号
     function setSettingRole(address role, bool toGrant) public onlyRole(DEFAULT_ADMIN_ROLE) {
         if (toGrant) _grantRole(SETTING_ROLE, role);
         else         _revokeRole(SETTING_ROLE, role);
     }
+
+    // 设置手续费率
+    function setFeeRatio(uint256 _feeRatio) public onlyRole(SETTING_ROLE) {
+        require(_feeRatio < 1E18, "ratio over 1");
+        feeRatio = _feeRatio;
+    }
+
     // 设置猜输赢的最终比分
     function setScores(uint256 matId, uint256 scoresA, uint256 scoresB)
         public
@@ -101,11 +109,19 @@ contract WorldCupQatar is AccessControl {
     {
         Match mat = matches[matId];
         require(address(mat) != address(0), "match not exist");
-        require(block.timestamp >= mat.endTime(), "match is not end");
+        // require(block.timestamp >= mat.endTime(), "match is not end");
 
         mat.setFinalScores(scoresA, scoresB);
 
         emit MatchFinished(matId, mat.countryA(), mat.countryB(), scoresA, scoresB);
+    }
+
+    // 设置一场比赛结束, 可以领取奖励
+    function setMatchFinished(uint256 matId) public onlyRole(SETTING_ROLE) {
+        Match mat = matches[matId];
+        require(address(mat) != address(0), "match not exist");
+
+        mat.setMatchFinished();
     }
     // 暂停/恢复一场比赛
     function pauseMatch(uint256 matId, bool toPause)
@@ -135,12 +151,9 @@ contract WorldCupQatar is AccessControl {
         require(Country.valid(countryA), "countryA unknown");
         require(Country.valid(countryB), "countryB unknown");
         require(countryA != countryB, "same country not allowed");
-        require(
-            block.timestamp <= matchStartTime && matchStartTime < matchEndTime,
-            "invalid time setting"
-        );
+        require(matchStartTime < matchEndTime,"invalid time setting");
         require(guessStartTime < guessEndTime, "guess time invalid");
-        require(guessEndTime < matchEndTime, "guess end time invalid");
+        require(guessEndTime <= matchStartTime, "guess end time invalid");
         require(payToken != address(0), "payToken is null address");
 
         totalMatches += 1;
@@ -167,8 +180,8 @@ contract WorldCupQatar is AccessControl {
         uint256 matchId,
         uint256 countryA,
         uint256 countryB,
-        uint256 startTime,
-        uint256 endTime,
+        uint256 matchStartTime,
+        uint256 matchEndTime,
         uint256 guessStartTime,
         uint256 guessEndTime,
         address payToken
@@ -181,17 +194,14 @@ contract WorldCupQatar is AccessControl {
         require(Country.valid(countryB), "countryB unknown");
         require(countryA != countryB, "same country not allowed");
         require(address(mat) != address(0), "match not exist");
-        require(
-            block.timestamp <= startTime && startTime < endTime,
-            "invalid mat time setting"
-        );
+        require(matchStartTime < matchEndTime,"invalid mat time setting");
         require(guessStartTime < guessEndTime, "guess time setting invalid");
-        require(guessEndTime < endTime, "guess end time invalid");
+        require(guessEndTime <= matchStartTime, "guess end time invalid");
         require(payToken != address(0), "payToken is null address");
 
-        mat.updateSetting(countryA, countryB, startTime, endTime, guessStartTime, guessEndTime, payToken);
+        mat.updateSetting(countryA, countryB, matchStartTime, matchEndTime, guessStartTime, guessEndTime, payToken);
 
-        emit MatchUpdated(matchId, countryA, countryB, startTime, endTime, guessStartTime, guessEndTime, payToken);
+        emit MatchUpdated(matchId, countryA, countryB, matchStartTime, matchEndTime, guessStartTime, guessEndTime, payToken);
     }
     /**
     * 竞猜

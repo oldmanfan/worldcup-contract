@@ -100,7 +100,7 @@ async function main() {
         printAllMatches(r);
     }
 
-    for (let i = 3; i <= 4; i++) {
+    for (let i = 1; i <= 1; i++) {
         let topN = await lens.getTopNRecords(Address.wc, i, 0, 50);
         printTopNRecord(`mathch id ${i} win lose record: `, topN)
 

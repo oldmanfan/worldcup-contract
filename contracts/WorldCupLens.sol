@@ -6,12 +6,8 @@ import "./libs/BaseGuess.sol";
 
 contract WorldCupLens {
     enum MatchStatus {
-        GUESS_NOT_START,  // 竞猜未开始
-        GUESS_ON_GOING,  // 竞猜进行中
-        GUESS_STOPED,    // 竞猜已停止
-
-        MATCH_NOT_START, // 比赛未开始
-        MATCH_ON_GOING,  // 比赛进行中
+        MATCH_NOT_START,  // 竞猜未开始
+        MATCH_ON_GOING,   // 进行中
         MATCH_FINISHED  // 比赛己完成
     }
 
@@ -112,14 +108,15 @@ contract WorldCupLens {
         result.guessStartTime = mat.guessStartTime();
         result.guessEndTime = mat.guessEndTime();
 
-        if (block.timestamp < result.guessStartTime) result.status = MatchStatus.GUESS_NOT_START;
-        else if (result.guessStartTime <= block.timestamp && block.timestamp <= result.guessEndTime) result.status = MatchStatus.GUESS_ON_GOING;
-        else if (block.timestamp >= result.matchEndTime)  result.status = MatchStatus.MATCH_FINISHED;
-        else result.status = MatchStatus.MATCH_ON_GOING;
-
         uint256 finalScores = mat.finalScores();
         result.scoresA = (finalScores & 0xff00) >> 8;
         result.scoresB = (finalScores & 0xff);
+
+        bool matchFinished = mat.matchFinished();
+
+        if (block.timestamp < result.guessStartTime) result.status = MatchStatus.MATCH_NOT_START;
+        else if (matchFinished)  result.status = MatchStatus.MATCH_FINISHED;
+        else result.status = MatchStatus.MATCH_ON_GOING;
 
         result.payToken = mat.payToken();
         result.winlosePool = getGuessPoolInfo(address(mat.winLose()));
