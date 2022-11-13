@@ -187,6 +187,72 @@ describe("WorldCupQatar", function () {
 
   });
 
+  it("claimAllRewards", async ()=> {
+    let now = (await ethers.provider.getBlock('latest')).timestamp;
+    let matchStart = now + 60 * 60;
+    let matchEnd = matchStart + 30*60;
+    let guessStart = matchStart - 30 * 60;
+    let guessEnd = matchStart;
+
+    await wc.startMatch( Countries.Senegal.id, Countries.Argentina.id, matchStart, matchEnd, guessStart, guessEnd, tt.address);
+    await wc.startMatch( Countries.Poland.id, Countries.Denmark.id, matchStart, matchEnd, guessStart, guessEnd, tt.address);
+    await wc.startMatch( Countries.France.id, Countries.Germany.id, matchStart, matchEnd, guessStart, guessEnd, tt.address);
+    await wc.startMatch( Countries.Morocco.id, Countries.Switzerland.id, matchStart, matchEnd, guessStart, guessEnd, tt.address);
+
+    // fastforward to guess start time
+    await ethers.provider.send("evm_setNextBlockTimestamp", [guessStart]);
+    await ethers.provider.send("evm_mine", []);
+
+    const P1BetAmount = TT("10");
+    const P2BetAmount = TT("15");
+    const P3BetAmount = TT("20");
+
+    const FEE1 = P1BetAmount.mul(3).div(100);
+    const FEE2 = P2BetAmount.mul(3).div(100);
+    const FEE3 = P3BetAmount.mul(3).div(100);
+
+    await wc.connect(player1).guess(1, GuessType.GUESS_SCORE_00, P1BetAmount);
+    await wc.connect(player1).guess(2, GuessType.GUESS_WINLOSE_B_WIN, P1BetAmount);
+    await wc.connect(player1).guess(3, GuessType.GUESS_WINLOSE_A_WIN, P1BetAmount);
+    await wc.connect(player1).guess(4, GuessType.GUESS_SCORE_13, P1BetAmount);
+
+    await wc.connect(player2).guess(1, GuessType.GUESS_SCORE_20, P2BetAmount);
+    await wc.connect(player2).guess(2, GuessType.GUESS_WINLOSE_A_WIN, P2BetAmount);
+    await wc.connect(player2).guess(3, GuessType.GUESS_WINLOSE_B_WIN, P2BetAmount);
+    await wc.connect(player2).guess(4, GuessType.GUESS_SCORE_43, P2BetAmount);
+
+    await wc.connect(player3).guess(1, GuessType.GUESS_SCORE_30, P3BetAmount);
+    await wc.connect(player3).guess(2, GuessType.GUESS_WINLOSE_DRAW, P3BetAmount);
+    await wc.connect(player3).guess(3, GuessType.GUESS_WINLOSE_DRAW, P3BetAmount);
+    await wc.connect(player3).guess(4, GuessType.GUESS_SCORE_43, P3BetAmount);
+
+    // fast forward to match end
+    await ethers.provider.send("evm_setNextBlockTimestamp", [matchEnd]);
+    await ethers.provider.send("evm_mine", []);
+
+    await wc.connect(owner).setScores(1, 3, 2);
+    await wc.connect(owner).setScores(2, 2, 3);
+    await wc.connect(owner).setScores(3, 3, 2);
+    await wc.connect(owner).setScores(4, 4, 3);
+
+    let mat = await ethers.getContractAt("Match", await wc.matches(2));
+    let winlose = await ethers.getContractAt("WinLoseGuess", await mat.winLose());
+    let scoreguess = await ethers.getContractAt("ScoreGuess", await mat.scoreGuess());
+    let betId = await winlose.sequenceRecords(1);
+
+    let beforeBalance = await tt.balanceOf(player1.address);
+    await wc.connect(player1).claimReward(2, betId);
+    let afterBalance = await tt.balanceOf(player1.address);
+    console.log(`claim a match: ${afterBalance.sub(beforeBalance)}`);
+
+    beforeBalance = await tt.balanceOf(player1.address);
+    await wc.connect(player1).claimAllRewards();
+    afterBalance = await tt.balanceOf(player1.address);
+    console.log(`claim all: ${afterBalance.sub(beforeBalance)}`);
+
+    await expect(wc.connect(player1).claimAllRewards()).to.revertedWith("no more rewards");
+  });
+
   it("controller settings", async () => {
     let countryA = Countries.Senegal.id;
     let countryB = Countries.Argentina.id;

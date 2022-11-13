@@ -132,6 +132,34 @@ contract Match {
             require(false, "not support guess type");
         }
     }
+    // 领取所有未领取的竞猜
+    function claimAllRewards(address player) public onlyFactory returns(uint256 amount) {
+        amount += claimAGuess(address(winLose), player);
+        amount += claimAGuess(address(scoreGuess), player);
+    }
+
+    function claimAGuess(address bga, address player) internal returns(uint256) {
+        BaseGuess pool = BaseGuess(bga);
+        uint256 joined = pool.playerJoinedGuessType(player);
+        uint256 count = joined & 0x1F;
+        uint256 claimed;
+        if (count > 0) {
+            joined = joined >> 5;
+            for (uint i = 0; i < count; i++) {
+                uint256 guessType = ((joined >> (5 * i)) & 0x1F);
+                if (!isWin(guessType)) continue;
+
+                (, , uint256 claimedAmount) = pool.getPlayerBetInfo(player, guessType);
+                if (claimedAmount > 0) continue;
+
+                uint256 payback = pool.payback(player, guessType);
+                if (payback == 0) continue;
+
+                claimed += pool.claim(player, guessType);
+            }
+        }
+        return claimed;
+    }
 
     // 用户提取收益
     function recall(address player, uint256 betId) public onlyFactory returns(uint256 amount) {

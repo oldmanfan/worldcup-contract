@@ -71,6 +71,11 @@ contract WorldCupQatar is AccessControl {
         uint256 betReward
     );
 
+    event AllRewardClaimed(
+        address indexed player,
+        uint256 totalClaimed
+    );
+
     event PlayerRecalled(
         uint256 indexed matId,
         address indexed player,
@@ -219,6 +224,24 @@ contract WorldCupQatar is AccessControl {
         chargePayout(mat.payToken(), msg.sender, betReward);
 
         emit RewardClaimed(matId, msg.sender, betId, betReward);
+    }
+    // 领取所有未
+    function claimAllRewards() public {
+        uint256 totalClaimed;
+        for (uint i = 1; i <= totalMatches; i++) {
+            Match mat = matches[i];
+            if (mat.paused() || !mat.finished()) continue;
+
+            uint256 amount = mat.claimAllRewards(msg.sender);
+
+            if (amount > 0) chargePayout(mat.payToken(), msg.sender, amount);
+
+            totalClaimed += amount;
+        }
+
+        require(totalClaimed > 0, "no more rewards");
+
+        emit AllRewardClaimed(msg.sender, totalClaimed);
     }
 
     // 因为任何暂停, 可以recall
