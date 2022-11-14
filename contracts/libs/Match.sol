@@ -78,7 +78,7 @@ contract Match {
     }
 
     function betable() public view returns(bool) {
-        return !paused && guessStartTime <= block.timestamp && block.timestamp <= guessEndTime;
+        return !paused && !matchFinished && guessStartTime <= block.timestamp && block.timestamp <= guessEndTime;
     }
 
     function finished() public view returns(bool) {

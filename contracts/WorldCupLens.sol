@@ -1,12 +1,15 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.9;
+
+import "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol";
 import "./WorldCupQatar.sol";
 import "./libs/Match.sol";
 import "./libs/BaseGuess.sol";
 
 contract WorldCupLens {
     enum MatchStatus {
-        MATCH_NOT_START,  // 竞猜未开始
+        GUESS_NOT_START,  // 竞猜未开始
+        GUESS_ON_GOING,   // 竞猜进行中
         MATCH_ON_GOING,   // 进行中
         MATCH_FINISHED  // 比赛己完成
     }
@@ -49,6 +52,10 @@ contract WorldCupLens {
         BetRecord[] scoreGuessRecords; // player猜比分的下单
 
         bool isPaused;
+
+        string payTokenName;
+        string payTokenSymbol;
+        uint256 payTokenDecimals;
     }
 
     function getGuessPoolInfo(address poolAddr) private view returns(GuessPool memory) {
@@ -114,9 +121,10 @@ contract WorldCupLens {
 
         bool matchFinished = mat.matchFinished();
 
-        if (block.timestamp < result.guessStartTime) result.status = MatchStatus.MATCH_NOT_START;
-        else if (matchFinished)  result.status = MatchStatus.MATCH_FINISHED;
-        else result.status = MatchStatus.MATCH_ON_GOING;
+        if (matchFinished) result.status = MatchStatus.MATCH_FINISHED;
+        else if (block.timestamp < result.guessStartTime)  result.status = MatchStatus.GUESS_NOT_START;
+        else if (block.timestamp > result.matchStartTime)  result.status = MatchStatus.MATCH_ON_GOING;
+        else result.status = MatchStatus.GUESS_ON_GOING;
 
         result.payToken = mat.payToken();
         result.winlosePool = getGuessPoolInfo(address(mat.winLose()));
@@ -128,6 +136,11 @@ contract WorldCupLens {
         }
 
         result.isPaused = mat.paused();
+
+        IERC20Metadata payToken = IERC20Metadata(result.payToken);
+        result.payTokenName = payToken.name();
+        result.payTokenSymbol = payToken.symbol();
+        result.payTokenDecimals = payToken.decimals();
 
         return result;
     }

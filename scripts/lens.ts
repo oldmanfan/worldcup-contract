@@ -86,6 +86,10 @@ function printAllMatches(m: any[]) {
             ${showRecords(mat[14])}
 
         isPaused: ${mat[15]}
+
+        payTokenName:     ${mat[16]}
+        payTokenSymbol:   ${mat[17]}
+        payTokenDecimals: ${mat[18]}
         -----------------------------------------------
 
         `)
@@ -96,17 +100,20 @@ async function main() {
 
     const lens = await ethers.getContractAt("WorldCupLens", Address.lens);
     for (let player of [player3]) {
-        let r = await lens.getAllMatches(Address.wc, player.getAddress());
+        let r = await lens.getAllMatches(Address.qatar, player.getAddress());
         printAllMatches(r);
     }
 
     for (let i = 1; i <= 1; i++) {
-        let topN = await lens.getTopNRecords(Address.wc, i, 0, 50);
+        let topN = await lens.getTopNRecords(Address.qatar, i, 0, 50);
         printTopNRecord(`mathch id ${i} win lose record: `, topN)
 
-        topN = await lens.getTopNRecords(Address.wc, i, 1, 50);
+        topN = await lens.getTopNRecords(Address.qatar, i, 1, 50);
         printTopNRecord(`mathch id ${i} score guess record: `, topN)
     }
+
+    const wc = await ethers.getContractAt('WorldCupQatar', Address.qatar);
+    console.log(`\nfeeRatio:  ${await wc.feeRatio()}`)
 }
 
 // We recommend this pattern to be able to use async/await everywhere

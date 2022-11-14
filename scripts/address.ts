@@ -8,17 +8,17 @@ import { ethers } from "hardhat";
 // }
 
 // HECO TEST
-// export const Address = {
-//   tt: "0x6c633473FBFc289Af5B0a67FF8fb8551608967F8",
-//   qatar: "0x0e99646814D4397934490252d228E01C963C7006",
-//   lens: "0xf9B0dd6ceD5e743Eed8598eEa5da54E7dE5162Cc"
-// }
+export const Address = {
+  tt: "0x6c633473FBFc289Af5B0a67FF8fb8551608967F8",
+  qatar: "0xEF83D8bCb40F89B6dbfA9429439D2851f7e0c5B4",
+  lens: "0x611568db33E01F02CD22a2433dbe053B64E5E8Dd"
+}
 
 // BSC TEST
 export const Address = {
     tt: "0x254d2Be5Cd077245E6005Ff54C7f874425d71091",
-    qatar: "0xbF5411B9CF86c539312098b44C06fD9AA60FeFC2",
-    lens: "0x8D976507c2a982B7e48fCD356A13d6FE958Ca7f8"
+    qatar: "0xeE2D69e6BDcB446ea9BD61FB8ebE1f7F7b9094e5",
+    lens: "0x0f8b73c5d9618042C2D0B931E4dE1d1F325E1c42"
 }
 
 export const vault =   {

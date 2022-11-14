@@ -14,6 +14,13 @@ async function main() {
   await wc.deployed();
 
   console.log(`WorldCupQatar deployed at: ${wc.address}`);
+
+  const LENS = await ethers.getContractFactory("WorldCupLens");
+  const lens = await LENS.deploy();
+
+  await lens.deployed();
+
+  console.log(`WorldCupLens deployed at: ${lens.address}`);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
