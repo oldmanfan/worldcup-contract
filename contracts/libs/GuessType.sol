@@ -81,6 +81,39 @@ library GuessType {
         else if (guessType == GUESS_SCORE_14) return scoresA == 1 && scoresB == 4;
         else if (guessType == GUESS_SCORE_34) return scoresA == 3 && scoresB == 4;
 
-        else/*if (guessType == GUESS_SCORE_OTHER)*/ return true;
+        else/*if (guessType == GUESS_SCORE_OTHER)*/ {
+            return isScoreOtherWin(scoresA, scoresB);
+        }
+    }
+
+    function isScoreOtherWin(uint256 scoresA, uint256 scoresB) private pure returns(bool) {
+        if (
+            (scoresA == 1 && scoresB == 0) ||
+            (scoresA == 2 && scoresB == 1) ||
+            (scoresA == 0 && scoresB == 0) ||
+            (scoresA == 0 && scoresB == 1) ||
+            (scoresA == 1 && scoresB == 2) ||
+            (scoresA == 3 && scoresB == 1) ||
+            (scoresA == 4 && scoresB == 0) ||
+            (scoresA == 1 && scoresB == 1) ||
+            (scoresA == 1 && scoresB == 3) ||
+            (scoresA == 0 && scoresB == 4) ||
+            (scoresA == 4 && scoresB == 2) ||
+            (scoresA == 2 && scoresB == 0) ||
+            (scoresA == 2 && scoresB == 2) ||
+            (scoresA == 2 && scoresB == 4) ||
+            (scoresA == 0 && scoresB == 2) ||
+            (scoresA == 3 && scoresB == 0) ||
+            (scoresA == 3 && scoresB == 2) ||
+            (scoresA == 3 && scoresB == 3) ||
+            (scoresA == 0 && scoresB == 3) ||
+            (scoresA == 2 && scoresB == 3) ||
+            (scoresA == 4 && scoresB == 1) ||
+            (scoresA == 4 && scoresB == 3) ||
+            (scoresA == 4 && scoresB == 4) ||
+            (scoresA == 1 && scoresB == 4) ||
+            (scoresA == 3 && scoresB == 4)
+        ) return false;
+        else return true;
     }
 }
