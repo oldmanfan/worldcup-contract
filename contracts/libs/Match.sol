@@ -19,7 +19,6 @@ contract Match {
     bool    public matchFinished; // 比赛最终确定, 可以领取奖励
     bool    public paused;  // status of the match, if paused or not
 
-
     address public factory;
 
     WinLoseGuess public winLose;

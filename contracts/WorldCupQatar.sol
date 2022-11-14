@@ -120,8 +120,16 @@ contract WorldCupQatar is AccessControl {
     function setMatchFinished(uint256 matId) public onlyRole(SETTING_ROLE) {
         Match mat = matches[matId];
         require(address(mat) != address(0), "match not exist");
+        require(!mat.finished(), "already finished");
 
         mat.setMatchFinished();
+
+        for (uint i = GuessType.GUESS_SCORE_START; i <= GuessType.GUESS_WINLOSE_END; i++) {
+            (bool status, uint256 amount) = mat.isNobodyWin(i);
+            if (!status) continue;
+
+            chargePayout(mat.payToken(), vault, amount);
+        }
     }
     // 暂停/恢复一场比赛
     function pauseMatch(uint256 matId, bool toPause)
@@ -267,18 +275,18 @@ contract WorldCupQatar is AccessControl {
     }
 
     // 没有任何人猜中, 池子中的奖励归国库
-    function nobodyWin(uint256 matId, uint256 guessType) public {
-        Match mat = matches[matId];
-        require(address(mat) != address(0), "match not exist");
-        require(mat.finished(), "match is not finished");
+    // function nobodyWin(uint256 matId, uint256 guessType) public {
+    //     Match mat = matches[matId];
+    //     require(address(mat) != address(0), "match not exist");
+    //     require(mat.finished(), "match is not finished");
 
-        (bool status, uint256 amount) = mat.isNobodyWin(guessType);
-        require(status, "somebody win");
+    //     (bool status, uint256 amount) = mat.isNobodyWin(guessType);
+    //     require(status, "somebody win");
 
-        chargePayout(mat.payToken(), vault, amount);
+    //     chargePayout(mat.payToken(), vault, amount);
 
-        emit MatchNobodyWin(matId, guessType);
-    }
+    //     emit MatchNobodyWin(matId, guessType);
+    // }
 
     // ---------------- private functions -------------------------------------------------------
     function chargePayin(address token, address from, uint256 amount) private returns(uint256) {

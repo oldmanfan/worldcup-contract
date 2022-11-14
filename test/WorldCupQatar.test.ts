@@ -1,5 +1,3 @@
-import { time, loadFixture } from "@nomicfoundation/hardhat-network-helpers";
-import { anyValue } from "@nomicfoundation/hardhat-chai-matchers/withArgs";
 import { expect } from "chai";
 import { ethers } from "hardhat";
 import { SignerWithAddress } from "@nomiclabs/hardhat-ethers/signers"
@@ -278,7 +276,7 @@ describe("WorldCupQatar", function () {
     await expect(wc.connect(player1).pauseMatch(1, false)).to.reverted;
   });
 
-  it("nobody win", async () => {
+  it("winlose nobody win", async () => {
     let countryA = Countries.Senegal.id;
     let countryB = Countries.Argentina.id;
     let now = (await ethers.provider.getBlock('latest')).timestamp;
@@ -304,18 +302,54 @@ describe("WorldCupQatar", function () {
     await ethers.provider.send("evm_setNextBlockTimestamp", [matchEnd]);
     await ethers.provider.send("evm_mine", []);
 
-    await wc.connect(owner).setScores(1, 3, 2);
-    await wc.connect(owner).setMatchFinished(1);
-
-    await expect(wc.nobodyWin(1, GuessType.GUESS_WINLOSE_DRAW)).to.revertedWith("somebody win");
-
     await wc.connect(owner).setScores(1, 3, 3);
 
+
     let beforeAmount = await tt.balanceOf(vault.address);
-    await wc.nobodyWin(1, GuessType.GUESS_WINLOSE_DRAW);
+    await wc.connect(owner).setMatchFinished(1);
     let afterAmount = await tt.balanceOf(vault.address);
 
     expect(afterAmount.sub(beforeAmount)).to.equal(P1BetAmount.add(P2BetAmount).sub(FEE1).sub(FEE2));
+  });
+
+  it("scores guess nobody win", async () => {
+    let countryA = Countries.Senegal.id;
+    let countryB = Countries.Argentina.id;
+    let now = (await ethers.provider.getBlock('latest')).timestamp;
+    let matchStart = now + 60 * 60;
+    let matchEnd = matchStart + 30*60;
+    let guessStart = matchStart - 30 * 60;
+    let guessEnd = matchStart;
+
+    await wc.startMatch(countryA, countryB, matchStart, matchEnd, guessStart, guessEnd, tt.address);
+    // fastforward to guess start time
+    await ethers.provider.send("evm_setNextBlockTimestamp", [guessStart]);
+    await ethers.provider.send("evm_mine", []);
+
+    const P1BetAmount = TT("10");
+    const P2BetAmount = TT("15");
+    const FEE1 = P1BetAmount.mul(3).div(100);
+    const FEE2 = P2BetAmount.mul(3).div(100);
+
+    await wc.connect(player1).guess(1, GuessType.GUESS_SCORE_11, P1BetAmount);
+    await wc.connect(player1).guess(1, GuessType.GUESS_SCORE_31, P1BetAmount);
+    await wc.connect(player1).guess(1, GuessType.GUESS_SCORE_04, P1BetAmount);
+    await wc.connect(player2).guess(1, GuessType.GUESS_SCORE_03, P2BetAmount);
+    await wc.connect(player2).guess(1, GuessType.GUESS_SCORE_24, P2BetAmount);
+    await wc.connect(player2).guess(1, GuessType.GUESS_SCORE_43, P2BetAmount);
+    await wc.connect(player2).guess(1, GuessType.GUESS_SCORE_OTHER, P2BetAmount);
+
+    // fast forward to match end
+    await ethers.provider.send("evm_setNextBlockTimestamp", [matchEnd]);
+    await ethers.provider.send("evm_mine", []);
+
+    await wc.connect(owner).setScores(1, 0, 2);
+
+    let beforeAmount = await tt.balanceOf(vault.address);
+    await wc.connect(owner).setMatchFinished(1);
+    let afterAmount = await tt.balanceOf(vault.address);
+
+    expect(afterAmount.sub(beforeAmount)).to.equal(P1BetAmount.mul(3).add(P2BetAmount.mul(4)).sub(FEE1.mul(3)).sub(FEE2.mul(4)));
   });
 
   it("recall", async () => {
