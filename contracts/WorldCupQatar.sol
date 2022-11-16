@@ -110,6 +110,7 @@ contract WorldCupQatar is AccessControl {
         Match mat = matches[matId];
         require(address(mat) != address(0), "match not exist");
         // require(block.timestamp >= mat.endTime(), "match is not end");
+        require(!mat.matchFinished(), "match finished");
 
         mat.setFinalScores(scoresA, scoresB);
 
