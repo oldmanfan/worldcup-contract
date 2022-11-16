@@ -126,7 +126,7 @@ contract WorldCupQatar is AccessControl {
 
         for (uint i = GuessType.GUESS_SCORE_START; i <= GuessType.GUESS_WINLOSE_END; i++) {
             (bool status, uint256 amount) = mat.isNobodyWin(i);
-            if (!status) continue;
+            if (!status || amount == 0) continue;
 
             chargePayout(mat.payToken(), vault, amount);
         }
@@ -206,6 +206,7 @@ contract WorldCupQatar is AccessControl {
         require(guessStartTime < guessEndTime, "guess time setting invalid");
         require(guessEndTime <= matchStartTime, "guess end time invalid");
         require(payToken != address(0), "payToken is null address");
+        require(!mat.finished(), "match finished");
 
         mat.updateSetting(countryA, countryB, matchStartTime, matchEndTime, guessStartTime, guessEndTime, payToken);
 
