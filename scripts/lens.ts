@@ -2,7 +2,20 @@ import { ethers } from "hardhat";
 import { GuessType } from "../test/GuessType";
 import { Address, player1, player2, player3 } from "./address";
 
+import {BigNumber} from "ethers";
+
 const BN = ethers.BigNumber;
+
+export function toDecimal(s: string | BigNumber) {
+    if (typeof s !== 'string') s = s.toString();
+
+    if (s.length < 19) s = '0'.repeat(19 - s.length).concat(s);
+
+    const delimi = s.length - 18;
+    let deno = s.substring(0, delimi);
+    let num = s.substring(delimi);
+    return deno +'.' + num;
+}
 
 function printTopNRecord(tag: string, rs: any[]) {
     let counts = rs.length;
@@ -13,7 +26,7 @@ function printTopNRecord(tag: string, rs: any[]) {
         betId:     ${ks[0]}
         player:    ${ks[1]}
         guessType: ${ks[2]}
-        betAmount: ${ks[3]}
+        betAmount: ${toDecimal(ks[3])}
         betTime  : ${ks[4]}
 
         `)
@@ -26,7 +39,7 @@ function printAllMatches(m: any[]) {
         let cnt = odds.length;
         let s = "";
         for (let i = 0; i < cnt; i++) {
-            s += `${odds[i]},`
+            s += `${toDecimal(odds[i])},`
         }
 
         return s;
@@ -38,11 +51,11 @@ function printAllMatches(m: any[]) {
             s += `
                 betId:         ${it[0]},
                 guessType:     ${it[1]},
-                betAmount:     ${it[2]},
+                betAmount:     ${toDecimal(it[2])},
                 betTime:       ${it[3]},
-                claimedAmount: ${it[4]},
-                odds:          ${it[5]},
-                win:           ${it[6]}
+                claimedAmount: ${toDecimal(it[4])},
+                odds:          ${toDecimal(it[5])},
+                win:           ${toDecimal(it[6])}
 
             `;
         }
@@ -66,18 +79,18 @@ function printAllMatches(m: any[]) {
         payToken:   ${mat[10]},
 
         winLosePool:
-            deposited:     ${mat[11][0]},
-            withdrawed:    ${mat[11][1]},
+            deposited:     ${toDecimal(mat[11][0])},
+            withdrawed:    ${toDecimal(mat[11][1])},
             playersAmount: ${mat[11][2]},
             odds: [${showOdds(mat[11][3])}]
             totalBetAmount: [${showOdds(mat[11][4])}]
 
         scoreGuessPool:
-            deposited:     ${mat[12][0]},
-            withdrawed:    ${mat[12][1]},
+            deposited:     ${toDecimal(mat[12][0])},
+            withdrawed:    ${toDecimal(mat[12][1])},
             playersAmount: ${mat[12][2]},
             odds: [${showOdds(mat[12][3])}]
-            totalBetAmount: [${showOdds(mat[12][4])}]
+            eachBetAmount: [${showOdds(mat[12][4])}]
 
         winloseRecords:
             ${showRecords(mat[13])}
@@ -99,18 +112,18 @@ function printAllMatches(m: any[]) {
 async function main() {
 
     const lens = await ethers.getContractAt("WorldCupLens", Address.lens);
-    for (let player of [player3]) {
-        let r = await lens.getAllMatches(Address.qatar, player.getAddress());
+    // for (let player of [player3]) {
+        let r = await lens.getAllMatches(Address.qatar, "0xa994A8c305cBa5932eC30F1331155035B09BF391");
         printAllMatches(r);
-    }
+    // }
 
-    for (let i = 1; i <= 1; i++) {
-        let topN = await lens.getTopNRecords(Address.qatar, i, 0, 50);
-        printTopNRecord(`mathch id ${i} win lose record: `, topN)
+    // for (let i = 1; i <= r.length; i++) {
+    //     let topN = await lens.getTopNRecords(Address.qatar, i, 0, 50);
+    //     printTopNRecord(`mathch id ${i} win lose record: `, topN)
 
-        topN = await lens.getTopNRecords(Address.qatar, i, 1, 50);
-        printTopNRecord(`mathch id ${i} score guess record: `, topN)
-    }
+    //     topN = await lens.getTopNRecords(Address.qatar, i, 1, 50);
+    //     printTopNRecord(`mathch id ${i} score guess record: `, topN)
+    // }
 
     const wc = await ethers.getContractAt('WorldCupQatar', Address.qatar);
     console.log(`\nfeeRatio:  ${await wc.feeRatio()}`)

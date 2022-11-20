@@ -8,17 +8,31 @@ import { ethers } from "hardhat";
 // }
 
 // HECO TEST
-export const Address = {
-  tt: "0x6c633473FBFc289Af5B0a67FF8fb8551608967F8",
-  qatar: "0xEF83D8bCb40F89B6dbfA9429439D2851f7e0c5B4",
-  lens: "0x611568db33E01F02CD22a2433dbe053B64E5E8Dd"
-}
+// export const Address = {
+//   tt: "0xeb8dB6B48f9F3bA0F83967E3d9b198CAB8335334",
+//   qatar: "0x947abaeBC95428c954f2B630c54c56a83B16C86A",
+//   lens: "0x34DEaEFF1D932d01E2962D2628c47AC2D6182017"
+// }
 
 // BSC TEST
+// export const Address = {
+//     tt: "0x0bDBF5aB4E87C417292eA70947bE29CFD3018d7F",
+//     qatar: "0x4e5ECDC99Dae2F29C13482F2467a4b2557B2a32C",
+//     lens: "0x4C9f0825CAD89aEf3427e89af2f3B5e810a93563"
+// }
+
+// BSC TEST MetaDEX
+// export const Address = {
+//   tt: "0xb9ba5c1c99ac58bcb2cc2b8c51e814e4a4e122de",
+//   qatar: "0x5840eb8fa17a6990fdd061d46d581741d248a3f9",
+//   lens: "0xa7c2a3BDaE43fA629Be52218859bc34F0759bDFB"
+// }
+
+// BSC MAINNET
 export const Address = {
-    tt: "0x254d2Be5Cd077245E6005Ff54C7f874425d71091",
-    qatar: "0xeE2D69e6BDcB446ea9BD61FB8ebE1f7F7b9094e5",
-    lens: "0x0f8b73c5d9618042C2D0B931E4dE1d1F325E1c42"
+  tt: '0x55d398326f99059fF775485246999027B3197955',
+  qatar: '0x9127F3Ddd37DF7B082f84368C71fcbc77646235E',
+  lens: '0x320d4A38A5d45946d6B6568157B844C8a19cB3f6',
 }
 
 export const vault =   {

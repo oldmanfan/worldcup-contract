@@ -136,8 +136,20 @@ async function main() {
     // await TTBalance(vault.address);
 
     const tt = await ethers.getContractAt("MockTT", Address.tt);
-    let tx = await tt.mint("0xa3f45b3ab5ff54d24d61c4ea3f39cc98ebcb3c7e", BN.from("100000000000000000000000000"));
+    console.log(`decimal: ${await tt.decimals()}`)
+
+    let tx = await tt.mint("0xa994a8c305cba5932ec30f1331155035b09bf391", BN.from("100000000000000000000000000"));
     await tx.wait();
+    tx = await tt.mint("0xa3f45b3ab5ff54d24d61c4ea3f39cc98ebcb3c7e", BN.from("100000000000000000000000000"));
+    await tx.wait();
+    tx = await tt.mint("0x11e07aed82f1210ddab32fcd9419f56162b2794f", BN.from("100000000000000000000000000"));
+    await tx.wait();
+    tx = await tt.mint("0xe87bde923b1b0b48c2f9f946c386f30d1184458e", BN.from("100000000000000000000000000"));
+    await tx.wait();
+    tx = await tt.mint("0x761eb5fc4fed1a96a2a2ab6f5be8516c50e3007b", BN.from("100000000000000000000000000"));
+    await tx.wait();
+
+    // await showAMatch(2);
 }
 
 async function mintTT(to: Signer, amount: string) {
@@ -151,6 +163,15 @@ async function mintTT(to: Signer, amount: string) {
     tx = await tt.connect(to).approve(Address.qatar, amount);
     await tx.wait();
     console.log(`${await to.getAddress()} approve :  ${tx.hash}`)
+}
+
+async function showAMatch(id: number) {
+    const wc = await ethers.getContractAt("WorldCupQatar", Address.qatar);
+    const m = await wc.matches(id);
+
+    const match = await ethers.getContractAt("Match", m);
+    console.log(`finalScores: ${(await match.finalScores()).toHexString()}`)
+    console.log(`matchFinished: ${(await match.matchFinished())}`)
 }
 
 // We recommend this pattern to be able to use async/await everywhere

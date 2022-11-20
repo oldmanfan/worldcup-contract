@@ -39,7 +39,7 @@ const config: HardhatUserConfig = {
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
     },
     bsc: {
-      url: "https://bsc-dataseed.binance.org",
+      url: "https://rpc.ankr.com/bsc",
       accounts,
       chainId: 56,
       gasPrice: 5000000000,  // 2 gwei (in wei) (default: 100 gwei)
