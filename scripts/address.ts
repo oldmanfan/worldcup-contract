@@ -29,10 +29,18 @@ import { ethers } from "hardhat";
 // }
 
 // BSC MAINNET
-export const Address = {
-  tt: '0x55d398326f99059fF775485246999027B3197955',
-  qatar: '0x9127F3Ddd37DF7B082f84368C71fcbc77646235E',
-  lens: '0x320d4A38A5d45946d6B6568157B844C8a19cB3f6',
+// export const Address = {
+//   tt: '0x55d398326f99059fF775485246999027B3197955',
+//   qatar: '0x9127F3Ddd37DF7B082f84368C71fcbc77646235E',
+//   lens: '0x320d4A38A5d45946d6B6568157B844C8a19cB3f6',
+// }
+
+// HECO MAINNET
+export const Address =  {
+  tt: '0x86040C76AAE5CBB322364CAF8820b0E8902e97E5',
+  qatar: '0xed997763d226edD1e745262a90C046fc81dFC505',
+  // lens: '0x6245a750F750e79Afe183E92fc8A3a11bf873216',
+  lens: '0xDBb6350a1857923aFE68177E62B423a8B1C1507E',
 }
 
 export const vault =   {

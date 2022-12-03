@@ -156,6 +156,27 @@ contract WorldCupLens {
         return result;
     }
 
+    // uint256 public constant PageSize = 45;
+
+    function getMatches(WorldCupQatar wc, address player, uint256 startMatch, uint256 pageSize)
+        public
+        view
+        returns(MatchStatistics[] memory result)
+    {
+        uint256 matchesCount = wc.totalMatches();
+
+        uint256 endMatch = pageSize + startMatch - 1;
+        if (endMatch >= matchesCount) endMatch = matchesCount;
+
+        uint256 resultSize = endMatch - startMatch + 1;
+
+        result = new MatchStatistics[](resultSize);
+
+        for (uint i = startMatch; i <= endMatch; i++) {
+            result[i - startMatch] = getMatchStatistics(wc.matches(i), player);
+        }
+    }
+
     struct TopNRecords {
         uint256 betId;        // 下注ID
         address player;      // 下注人

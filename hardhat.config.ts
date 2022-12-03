@@ -34,9 +34,8 @@ const config: HardhatUserConfig = {
     },
     heco: {
       url: "https://http-mainnet.hecochain.com",
-      gasPrice: 5000000000,  // 5gwei
-      accounts:
-        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+      // gasPrice: 5000000000,  // 5gwei
+      accounts,
     },
     bsc: {
       url: "https://rpc.ankr.com/bsc",

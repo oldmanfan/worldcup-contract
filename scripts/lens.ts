@@ -112,9 +112,13 @@ function printAllMatches(m: any[]) {
 async function main() {
 
     const lens = await ethers.getContractAt("WorldCupLens", Address.lens);
+    const player = '0x491040cbf178ec2b7be05c53de68821cc7641831'
     // for (let player of [player3]) {
-        let r = await lens.getAllMatches(Address.qatar, "0xa994A8c305cBa5932eC30F1331155035B09BF391");
-        printAllMatches(r);
+        const matches: any[] = [];
+        let r0 = await lens.getMatches(Address.qatar, player, BigNumber.from(1), BigNumber.from(45));
+        let r1 = await lens.getMatches(Address.qatar, player, BigNumber.from(46), BigNumber.from(45));
+        printAllMatches(r0);
+        printAllMatches(r1);
     // }
 
     // for (let i = 1; i <= r.length; i++) {
@@ -126,6 +130,15 @@ async function main() {
     // }
 
     const wc = await ethers.getContractAt('WorldCupQatar', Address.qatar);
+    // const totalMatches = await wc.totalMatches();
+
+    // for (let i = totalMatches.toNumber(); i >= 1; i--) {
+    //     const match50 = await wc.matches(i);
+
+    //     const stat = await lens.getMatchStatistics(match50, player);
+    //     console.log(`stat: ${stat}\n`)
+    // }
+    console.log(`totalMatches: ${await wc.totalMatches()}`);
     console.log(`\nfeeRatio:  ${await wc.feeRatio()}`)
 }
 
