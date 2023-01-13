@@ -5,6 +5,8 @@
     "hardhat": "^2.12.1"
   },
   "dependencies": {
-    "@openzeppelin/contracts": "^4.7.3"
+    "@openzeppelin/contracts": "^4.7.3",
+    "@types/delay": "^3.1.0",
+    "delay": "^5.0.0"
   }
 }

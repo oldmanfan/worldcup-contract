@@ -1,0 +1,848 @@
+Not Claimed:
+                player: 0xcA2304c011A09aDE7c9c244F60cC39D577457B31
+                matchId: 64, guessType: 27, payback: 87985, claimed: 0
+ Not Claimed:
+                player: 0xd9E48986CB035d8475D7cEaD7F689640A9cb3443
+                matchId: 64, guessType: 27, payback: 179691, claimed: 0
+Not Claimed:
+                player: 0x13a0aF044c92583A24ea8811A5192325b6067BeD
+                matchId: 64, guessType: 27, payback: 87985, claimed: 0
+Not Claimed:
+                player: 0x79d400e52b8a55964447a84A31a79B09d261d732
+                matchId: 64, guessType: 27, payback: 52791, claimed: 0
+Not Claimed:
+                player: 0x13a0aF044c92583A24ea8811A5192325b6067BeD
+                matchId: 64, guessType: 26, payback: 82288, claimed: 0
+Not Claimed:
+                player: 0x1a4C28FD66f0fA38456d29154eeE7d36BB7d103C
+                matchId: 63, guessType: 27, payback: 900722, claimed: 0
+Not Claimed:
+                player: 0xb33C3c161C65Bc6E8aD22b9D2485B2a2488F6D66
+                matchId: 63, guessType: 27, payback: 18014, claimed: 0
+Not Claimed:
+                player: 0xD38c751aDE55Aaa1f8a572c43594a3A94E62FDa4
+                matchId: 63, guessType: 27, payback: 90072, claimed: 0
+ Not Claimed:
+                player: 0xb1B2B62bE5bF0fA7D80599c16983F4AA8b95076A
+                matchId: 62, guessType: 27, payback: 24527, claimed: 0
+
+Not Claimed:
+                player: 0xdF392A2760EE54207b77447329aCC97e9C6415c0
+                matchId: 62, guessType: 27, payback: 24527, claimed: 0
+
+Not Claimed:
+                player: 0xb33C3c161C65Bc6E8aD22b9D2485B2a2488F6D66
+                matchId: 62, guessType: 27, payback: 24527, claimed: 0
+
+Not Claimed:
+                player: 0x3FDf642432dC61C4386f74343a7259a9FcF074C4
+                matchId: 62, guessType: 27, payback: 380180, claimed: 0
+
+Not Claimed:
+                player: 0xD38c751aDE55Aaa1f8a572c43594a3A94E62FDa4
+                matchId: 62, guessType: 27, payback: 61319, claimed: 0
+
+Not Claimed:
+                player: 0xc68ac2FE97c97981163533474934FCd442c45523
+                matchId: 61, guessType: 27, payback: 102845, claimed: 0
+
+Not Claimed:
+                player: 0xea47E884E1B65902dEfb1dabb2A88C730329F5eE
+                matchId: 61, guessType: 27, payback: 146922, claimed: 0
+
+Not Claimed:
+                player: 0x9dD4A7dab17149B53DcDd4a76f36ceBC5131b69F
+                matchId: 61, guessType: 27, payback: 29384, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0xaf241fDEB64B2Ba20209639175895eD7f87ee9c4
+                matchId: 61, guessType: 27, payback: 146922, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0x77E6A13fDb0994B47E8AdEA94fcD78Bb3334A873
+                matchId: 61, guessType: 27, payback: 13223, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0xF7029faC068f097ad81fFD049E427c2E5588E6F9
+                matchId: 61, guessType: 27, payback: 293844, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0xD38c751aDE55Aaa1f8a572c43594a3A94E62FDa4
+                matchId: 61, guessType: 27, payback: 73461, claimed: 0
+WinLose: mathch  60
+
+            Not Claimed:
+                player: 0x39C11d8e6B6E479E56203B6E8E02B2a7130c90dC
+                matchId: 60, guessType: 29, payback: 85402, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0xD38c751aDE55Aaa1f8a572c43594a3A94E62FDa4
+                matchId: 60, guessType: 29, payback: 85402, claimed: 0
+
+
+ScoreGuess: match  60
+
+            Not Claimed:
+                player: 0xD0837e17A2E45D4F14A5F97B34200FbaC077aED2
+                matchId: 60, guessType: 5, payback: 102275, claimed: 0
+
+
+WinLose: mathch  59
+
+            Not Claimed:
+                player: 0xea47E884E1B65902dEfb1dabb2A88C730329F5eE
+                matchId: 59, guessType: 27, payback: 192218, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0xCA87Fa02bd9Ba56808fFc3Ad4ECEDad2c773E058
+                matchId: 59, guessType: 27, payback: 7688, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0xeF47aEC0b9Ae13e78bBfAFC8a5B72F2B45779BA4
+                matchId: 59, guessType: 27, payback: 76887, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0xD0837e17A2E45D4F14A5F97B34200FbaC077aED2
+                matchId: 59, guessType: 27, payback: 384436, claimed: 0
+
+
+ScoreGuess: match  59
+WinLose: mathch  58
+
+            Not Claimed:
+                player: 0xb5705796fFF054D0a1c32339Dd8F98D572F29185
+                matchId: 58, guessType: 29, payback: 73601, claimed: 0
+
+
+ScoreGuess: match  58
+WinLose: mathch  57
+ScoreGuess: match  57
+matchId:  57 except
+matchId:  56 except
+WinLose: mathch  55
+
+            Not Claimed:
+                player: 0xF7029faC068f097ad81fFD049E427c2E5588E6F9
+                matchId: 55, guessType: 27, payback: 252046, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0x2f3b7e50FD0D0a63b12a891B119863F0118F8d7E
+                matchId: 55, guessType: 27, payback: 5040, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0xb33C3c161C65Bc6E8aD22b9D2485B2a2488F6D66
+                matchId: 55, guessType: 27, payback: 151227, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0xD38c751aDE55Aaa1f8a572c43594a3A94E62FDa4
+                matchId: 55, guessType: 27, payback: 151227, claimed: 0
+
+
+ScoreGuess: match  55
+matchId:  55 except
+WinLose: mathch  54
+matchId:  54 except
+WinLose: mathch  53
+matchId:  53 except
+WinLose: mathch  52
+
+            Not Claimed:
+                player: 0xD670Fd0A5F01Adb8EE4e784B29a22D4875344C10
+                matchId: 52, guessType: 27, payback: 56865, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0x90B0B0057c7aDe894671B4601972475b05620005
+                matchId: 52, guessType: 27, payback: 227463, claimed: 0
+
+
+ScoreGuess: match  52
+WinLose: mathch  51
+
+            Not Claimed:
+                player: 0xdF392A2760EE54207b77447329aCC97e9C6415c0
+                matchId: 51, guessType: 27, payback: 55113, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0xE5E489c3d43B9f117D80BA138031D705eCE7Bf13
+                matchId: 51, guessType: 27, payback: 143293, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0xfc2a109dB0248cd1BF1e54A3A75bB7777b38D679
+                matchId: 51, guessType: 27, payback: 2204520, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0x90B0B0057c7aDe894671B4601972475b05620005
+                matchId: 51, guessType: 27, payback: 110226, claimed: 0
+
+
+ScoreGuess: match  51
+
+            Not Claimed:
+                player: 0xdF392A2760EE54207b77447329aCC97e9C6415c0
+                matchId: 51, guessType: 6, payback: 58888, claimed: 0
+
+
+WinLose: mathch  50
+
+            Not Claimed:
+                player: 0xb33C3c161C65Bc6E8aD22b9D2485B2a2488F6D66
+                matchId: 50, guessType: 27, payback: 53998, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0x90B0B0057c7aDe894671B4601972475b05620005
+                matchId: 50, guessType: 27, payback: 215992, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0x77B1AB1fa3944a8Ba1009D9D7C8fe18361D15A7F
+                matchId: 50, guessType: 27, payback: 21599, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0xD38c751aDE55Aaa1f8a572c43594a3A94E62FDa4
+                matchId: 50, guessType: 27, payback: 53998, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0xe6D1da8aA5ACBD221ae07Ca0291a5F800363a06e
+                matchId: 50, guessType: 27, payback: 647978, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0x0D35fFc27e8FD387080ec4c4c060027946B8f850
+                matchId: 50, guessType: 27, payback: 21599, claimed: 0
+
+
+ScoreGuess: match  50
+
+            Not Claimed:
+                player: 0xc192c90f9c904900748c48b5fb18975f337d4e33
+                matchId: 50, guessType: 2, payback: 483055, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0xfc2a109dB0248cd1BF1e54A3A75bB7777b38D679
+                matchId: 50, guessType: 2, payback: 1380157, claimed: 0
+
+
+WinLose: mathch  49
+
+            Not Claimed:
+                player: 0x77B1AB1fa3944a8Ba1009D9D7C8fe18361D15A7F
+                matchId: 49, guessType: 27, payback: 68989, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0xD38c751aDE55Aaa1f8a572c43594a3A94E62FDa4
+                matchId: 49, guessType: 27, payback: 68989, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0x815e2549AcbBa5B81850e3242B07B966d135D8b7
+                matchId: 49, guessType: 27, payback: 13797, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0xC71C69Bf45A5c761fBa14fe691c4A40ae5f1a51C
+                matchId: 49, guessType: 27, payback: 137979, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0x0D35fFc27e8FD387080ec4c4c060027946B8f850
+                matchId: 49, guessType: 27, payback: 27595, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0x57cF76dC90cdaccde8Bd533a16f86D24eFfDF0dD
+                matchId: 49, guessType: 27, payback: 335, claimed: 0
+
+
+ScoreGuess: match  49
+WinLose: mathch  48
+ScoreGuess: match  48
+matchId:  48 except
+WinLose: mathch  47
+
+            Not Claimed:
+                player: 0x7c8Bb9f35244A526378B0C95D8Ed38942761dDbD
+                matchId: 47, guessType: 29, payback: 409232, claimed: 0
+
+
+ScoreGuess: match  47
+matchId:  47 except
+WinLose: mathch  46
+
+            Not Claimed:
+                player: 0xD670Fd0A5F01Adb8EE4e784B29a22D4875344C10
+                matchId: 46, guessType: 29, payback: 27792, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0xb33C3c161C65Bc6E8aD22b9D2485B2a2488F6D66
+                matchId: 46, guessType: 29, payback: 27792, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0x7c8Bb9f35244A526378B0C95D8Ed38942761dDbD
+                matchId: 46, guessType: 29, payback: 555847, claimed: 0
+
+
+ScoreGuess: match  46
+matchId:  46 except
+WinLose: mathch  45
+
+            Not Claimed:
+                player: 0xA5607735F020629C1ed8DF2654CF917c64C56da3
+                matchId: 45, guessType: 27, payback: 156112, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0xfc2a109dB0248cd1BF1e54A3A75bB7777b38D679
+                matchId: 45, guessType: 27, payback: 390280, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0x40B91FC8c4760a4Ab912F5348edd64cA7f50c85d
+                matchId: 45, guessType: 27, payback: 78056, claimed: 0
+
+
+ScoreGuess: match  45
+
+            Not Claimed:
+                player: 0xA5607735F020629C1ed8DF2654CF917c64C56da3
+                matchId: 45, guessType: 2, payback: 323843, claimed: 0
+
+
+matchId:  45 except
+WinLose: mathch  44
+matchId:  44 except
+WinLose: mathch  43
+
+            Not Claimed:
+                player: 0x87647A4F1B328300A7E34CD23c230CE1c4C082fa
+                matchId: 43, guessType: 27, payback: 67560, claimed: 0
+
+
+ScoreGuess: match  43
+matchId:  43 except
+WinLose: mathch  42
+
+            Not Claimed:
+                player: 0xb33C3c161C65Bc6E8aD22b9D2485B2a2488F6D66
+                matchId: 42, guessType: 29, payback: 13727, claimed: 0
+
+
+matchId:  42 except
+WinLose: mathch  41
+
+            Not Claimed:
+                player: 0x68c8795955079a245FC00B8F8d4DFFE85492cbf9
+                matchId: 41, guessType: 28, payback: 133116, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0x87647A4F1B328300A7E34CD23c230CE1c4C082fa
+                matchId: 41, guessType: 28, payback: 66558, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0x7c8Bb9f35244A526378B0C95D8Ed38942761dDbD
+                matchId: 41, guessType: 28, payback: 299511, claimed: 0
+
+
+matchId:  41 except
+WinLose: mathch  40
+
+            Not Claimed:
+                player: 0xD670Fd0A5F01Adb8EE4e784B29a22D4875344C10
+                matchId: 40, guessType: 29, payback: 17792, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0xe22Ba4a7Cdd5E2cF07A29b041B936D4079A03EEA
+                matchId: 40, guessType: 29, payback: 17792, claimed: 0
+
+
+ScoreGuess: match  40
+WinLose: mathch  39
+
+            Not Claimed:
+                player: 0xD670Fd0A5F01Adb8EE4e784B29a22D4875344C10
+                matchId: 39, guessType: 29, payback: 66846, claimed: 0
+
+
+matchId:  39 except
+WinLose: mathch  38
+
+            Not Claimed:
+                player: 0xe22Ba4a7Cdd5E2cF07A29b041B936D4079A03EEA
+                matchId: 38, guessType: 27, payback: 29612, claimed: 0
+
+
+matchId:  38 except
+WinLose: mathch  37
+
+            Not Claimed:
+                player: 0xD670Fd0A5F01Adb8EE4e784B29a22D4875344C10
+                matchId: 37, guessType: 27, payback: 48765, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0xD38c751aDE55Aaa1f8a572c43594a3A94E62FDa4
+                matchId: 37, guessType: 27, payback: 48765, claimed: 0
+
+
+ScoreGuess: match  37
+matchId:  37 except
+WinLose: mathch  36
+matchId:  36 except
+WinLose: mathch  35
+
+            Not Claimed:
+                player: 0xD670Fd0A5F01Adb8EE4e784B29a22D4875344C10
+                matchId: 35, guessType: 29, payback: 94035, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0xe22Ba4a7Cdd5E2cF07A29b041B936D4079A03EEA
+                matchId: 35, guessType: 29, payback: 31345, claimed: 0
+
+
+matchId:  35 except
+WinLose: mathch  34
+
+            Not Claimed:
+                player: 0xD670Fd0A5F01Adb8EE4e784B29a22D4875344C10
+                matchId: 34, guessType: 29, payback: 95289, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0x90B0B0057c7aDe894671B4601972475b05620005
+                matchId: 34, guessType: 29, payback: 317633, claimed: 0
+
+
+matchId:  34 except
+WinLose: mathch  33
+
+            Not Claimed:
+                player: 0x895D35BfE382e0b4E5dd30043c8e3d1AC7f70c2B
+                matchId: 33, guessType: 27, payback: 27226, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0xD670Fd0A5F01Adb8EE4e784B29a22D4875344C10
+                matchId: 33, guessType: 27, payback: 61878, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0x90B0B0057c7aDe894671B4601972475b05620005
+                matchId: 33, guessType: 27, payback: 123757, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0xe6D1da8aA5ACBD221ae07Ca0291a5F800363a06e
+                matchId: 33, guessType: 27, payback: 618788, claimed: 0
+
+
+matchId:  33 except
+WinLose: mathch  32
+matchId:  32 except
+WinLose: mathch  31
+
+            Not Claimed:
+                player: 0x62C298f5c0402aF66A6D91388Da03FDB720C2a43
+                matchId: 31, guessType: 27, payback: 28620, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0xD670Fd0A5F01Adb8EE4e784B29a22D4875344C10
+                matchId: 31, guessType: 27, payback: 71550, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0x7D71Bf244986054d3B6C571746029e7bfC2A6324
+                matchId: 31, guessType: 27, payback: 71550, claimed: 0
+
+
+ScoreGuess: match  31
+matchId:  31 except
+WinLose: mathch  30
+
+            Not Claimed:
+                player: 0xD670Fd0A5F01Adb8EE4e784B29a22D4875344C10
+                matchId: 30, guessType: 29, payback: 64857, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0xD38c751aDE55Aaa1f8a572c43594a3A94E62FDa4
+                matchId: 30, guessType: 29, payback: 21619, claimed: 0
+
+
+ScoreGuess: match  30
+matchId:  30 except
+WinLose: mathch  29
+ScoreGuess: match  29
+matchId:  29 except
+WinLose: mathch  28
+
+            Not Claimed:
+                player: 0xD670Fd0A5F01Adb8EE4e784B29a22D4875344C10
+                matchId: 28, guessType: 28, payback: 50701, claimed: 0
+
+
+matchId:  28 except
+WinLose: mathch  27
+matchId:  27 except
+WinLose: mathch  26
+
+            Not Claimed:
+                player: 0xD670Fd0A5F01Adb8EE4e784B29a22D4875344C10
+                matchId: 26, guessType: 29, payback: 60619, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0x9D546F989192D7cc31668874c08Fd93d2a42f5Fb
+                matchId: 26, guessType: 29, payback: 60619, claimed: 0
+
+
+ScoreGuess: match  26
+matchId:  26 except
+WinLose: mathch  25
+
+            Not Claimed:
+                player: 0xCc721397235937a9619eE51aE723e649D622beac
+                matchId: 25, guessType: 29, payback: 71277, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0xf86cA8EeE099e3bb4FE5badE8487C4596ed66521
+                matchId: 25, guessType: 29, payback: 71277, claimed: 0
+
+
+matchId:  25 except
+WinLose: mathch  24
+
+            Not Claimed:
+                player: 0xD670Fd0A5F01Adb8EE4e784B29a22D4875344C10
+                matchId: 24, guessType: 27, payback: 67249, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0x1c9d3b13a65b47bdb77d0A7207AC4BcA87e38bF6
+                matchId: 24, guessType: 27, payback: 67249, claimed: 0
+
+
+matchId:  24 except
+WinLose: mathch  23
+matchId:  23 except
+WinLose: mathch  22
+
+            Not Claimed:
+                player: 0xD670Fd0A5F01Adb8EE4e784B29a22D4875344C10
+                matchId: 22, guessType: 27, payback: 54110, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0x68e8f9046D1fA76C6f035E0d9877daEA1d4d2aa4
+                matchId: 22, guessType: 27, payback: 36073, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0x20e7E9F9bb9C3d67d0671d42E4f1D659fe102E26
+                matchId: 22, guessType: 27, payback: 90183, claimed: 0
+
+
+ScoreGuess: match  22
+matchId:  22 except
+WinLose: mathch  21
+matchId:  21 except
+WinLose: mathch  20
+
+            Not Claimed:
+                player: 0xD670Fd0A5F01Adb8EE4e784B29a22D4875344C10
+                matchId: 20, guessType: 28, payback: 107250, claimed: 0
+
+
+matchId:  20 except
+WinLose: mathch  19
+
+            Not Claimed:
+                player: 0x684020b6c7086F5BB7150c0ab3A1E9e19Bb7EA73
+                matchId: 19, guessType: 28, payback: 65097, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0xe226d995447a526E3418185Be6c8B1b3C1C0110E
+                matchId: 19, guessType: 28, payback: 65097, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0xc2DbB53295Cf9ca7d299b2177fa74Cb6b02c7f1D
+                matchId: 19, guessType: 28, payback: 65097, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0x64b2d0d941ab8D8376fB43fcc92FD0F72D4E5F37
+                matchId: 19, guessType: 28, payback: 650972, claimed: 0
+
+
+ScoreGuess: match  19
+matchId:  19 except
+WinLose: mathch  18
+
+            Not Claimed:
+                player: 0xD670Fd0A5F01Adb8EE4e784B29a22D4875344C10
+                matchId: 18, guessType: 29, payback: 56592, claimed: 0
+
+
+matchId:  18 except
+WinLose: mathch  17
+matchId:  17 except
+WinLose: mathch  16
+
+            Not Claimed:
+                player: 0x16e04EE4993A8217CA836B29ff3a1d61b59e8a4d
+                matchId: 16, guessType: 27, payback: 16156, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0x0D8c3DC314C9162a3BEF640aab298aF168834E1d
+                matchId: 16, guessType: 27, payback: 12428, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0x26f98aE41Ee2A927A12F708cb1c40698E38FCCCE
+                matchId: 16, guessType: 27, payback: 24856, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0xBc487f36ae0a8b92Ea7B8b60771EC0d8090bbB66
+                matchId: 16, guessType: 27, payback: 3728, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0xe6D1da8aA5ACBD221ae07Ca0291a5F800363a06e
+                matchId: 16, guessType: 27, payback: 248561, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0x3891fBe3bC27c427D9f15091F1d670845c4C1166
+                matchId: 16, guessType: 27, payback: 24856, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0x6BA75e1c317302124Ad36AF22902C4CCCAd42B97
+                matchId: 16, guessType: 27, payback: 62140, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0x244804f8bfdeb4a4880A9Ea42979c0D6190dB203
+                matchId: 16, guessType: 27, payback: 124280, claimed: 0
+
+
+ScoreGuess: match  16
+matchId:  16 except
+WinLose: mathch  15
+
+            Not Claimed:
+                player: 0x16e04EE4993A8217CA836B29ff3a1d61b59e8a4d
+                matchId: 15, guessType: 27, payback: 13089, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0xe6D1da8aA5ACBD221ae07Ca0291a5F800363a06e
+                matchId: 15, guessType: 27, payback: 667547, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0x346DdcDa719512AEFB07CC59A8E0f307949aD2b5
+                matchId: 15, guessType: 27, payback: 26178, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0x3891fBe3bC27c427D9f15091F1d670845c4C1166
+                matchId: 15, guessType: 27, payback: 26178, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0x244804f8bfdeb4a4880A9Ea42979c0D6190dB203
+                matchId: 15, guessType: 27, payback: 65445, claimed: 0
+
+
+ScoreGuess: match  15
+matchId:  15 except
+WinLose: mathch  14
+ScoreGuess: match  14
+matchId:  14 except
+WinLose: mathch  13
+
+            Not Claimed:
+                player: 0xc2DbB53295Cf9ca7d299b2177fa74Cb6b02c7f1D
+                matchId: 13, guessType: 27, payback: 34020, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0xe6D1da8aA5ACBD221ae07Ca0291a5F800363a06e
+                matchId: 13, guessType: 27, payback: 357220, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0x3b1D948c08f645075aFF0e1A9de5c64907769817
+                matchId: 13, guessType: 27, payback: 170104, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0x3891fBe3bC27c427D9f15091F1d670845c4C1166
+                matchId: 13, guessType: 27, payback: 17010, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0x9EF7B844bb37e33De1Fc049C2759E665d2718087
+                matchId: 13, guessType: 27, payback: 85052, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0x96dDa6A3DE8308bB7472f1cf02b50fb9E4A8E5c0
+                matchId: 13, guessType: 27, payback: 34020, claimed: 0
+
+
+ScoreGuess: match  13
+matchId:  13 except
+WinLose: mathch  12
+matchId:  12 except
+WinLose: mathch  11
+
+            Not Claimed:
+                player: 0x4005cD21c278C30A00999276F374de70A2445333
+                matchId: 11, guessType: 27, payback: 130845, claimed: 0
+
+
+matchId:  11 except
+WinLose: mathch  10
+ScoreGuess: match  10
+matchId:  10 except
+WinLose: mathch  9
+matchId:  9 except
+WinLose: mathch  8
+matchId:  8 except
+WinLose: mathch  7
+matchId:  7 except
+WinLose: mathch  6
+
+            Not Claimed:
+                player: 0x027bb3E443C1Da33863E12a050e9100B8D9fe14A
+                matchId: 6, guessType: 28, payback: 124873, claimed: 0
+
+
+matchId:  6 except
+WinLose: mathch  5
+ScoreGuess: match  5
+WinLose: mathch  4
+ScoreGuess: match  4
+WinLose: mathch  3
+matchId:  3 except
+WinLose: mathch  2
+
+            Not Claimed:
+                player: 0xc0ea4398A1125c3a7C9921c8b1A19E5dD2dc7E0f
+                matchId: 2, guessType: 27, payback: 59300, claimed: 0
+
+
+
+            Not Claimed:
+                player: 0x04a128301372e0ab9238157e75393c2D50c96f5d
+                matchId: 2, guessType: 27, payback: 118600, claimed: 0
+
+
+matchId:  2 except
+WinLose: mathch  1
+
+            Not Claimed:
+                player: 0x9eC5BBD0874c2cd3dD25A99D88CA5CFFaE09f4b0
+                matchId: 1, guessType: 29, payback: 1872615, claimed: 0
+
+
+matchId:  1 except
+➜  worldcup-contract git:(main) ✗

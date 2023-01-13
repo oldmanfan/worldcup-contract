@@ -41,7 +41,7 @@ const config: HardhatUserConfig = {
       url: "https://rpc.ankr.com/bsc",
       accounts,
       chainId: 56,
-      gasPrice: 5000000000,  // 2 gwei (in wei) (default: 100 gwei)
+      // gasPrice: 5000000000,  // 2 gwei (in wei) (default: 100 gwei)
     },
     bsctest: {
       url: "https://bsctestapi.terminet.io/rpc",

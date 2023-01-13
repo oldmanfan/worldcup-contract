@@ -1,0 +1,107 @@
+
+player: 0xA53F0e67456Aaf4c8fbEa7E5c8c76bC11310D29C
+matchId: 56, guessType: 27, payback: 1178294736842105262, claimed: 0
+
+
+player: 0x760e2d3C027f674298f8009dD361DE88A40b0826
+matchId: 55, guessType: 27, payback: 10857533333333333331, claimed: 0
+
+
+player: 0xA53F0e67456Aaf4c8fbEa7E5c8c76bC11310D29C
+matchId: 53, guessType: 29, payback: 4988571428571428569, claimed: 0
+
+
+player: 0x760e2d3C027f674298f8009dD361DE88A40b0826
+matchId: 53, guessType: 29, payback: 1829142857142857142, claimed: 0
+
+
+player: 0xA53F0e67456Aaf4c8fbEa7E5c8c76bC11310D29C
+matchId: 52, guessType: 27, payback: 1038632075471698112, claimed: 0
+
+
+player: 0xA53F0e67456Aaf4c8fbEa7E5c8c76bC11310D29C
+matchId: 51, guessType: 27, payback: 1146414957078422813, claimed: 0
+
+
+player: 0x760e2d3C027f674298f8009dD361DE88A40b0826
+matchId: 50, guessType: 27, payback: 823296841927017187, claimed: 0
+
+
+player: 0x760e2d3C027f674298f8009dD361DE88A40b0826
+matchId: 49, guessType: 27, payback: 1774391153846153844, claimed: 0
+
+
+player: 0x9440A454fF8c4F3C6A59DC547ac64937A6D79b25
+matchId: 44, guessType: 29, payback: 2143902818181818181, claimed: 0
+
+
+player: 0x9440A454fF8c4F3C6A59DC547ac64937A6D79b25
+matchId: 42, guessType: 29, payback: 1806206896551724137, claimed: 0
+
+
+player: 0x760e2d3C027f674298f8009dD361DE88A40b0826
+matchId: 40, guessType: 29, payback: 3641412983181239064, claimed: 0
+
+
+player: 0x438Ae27Bb4E9C99EE4bF130C0519a39F49747517
+matchId: 39, guessType: 29, payback: 1332491349480968857, claimed: 0
+
+
+player: 0x760e2d3C027f674298f8009dD361DE88A40b0826
+matchId: 39, guessType: 29, payback: 1199242214532871971, claimed: 0
+
+
+player: 0x760e2d3C027f674298f8009dD361DE88A40b0826
+matchId: 38, guessType: 27, payback: 6851401750602562475, claimed: 0
+
+
+player: 0x760e2d3C027f674298f8009dD361DE88A40b0826
+matchId: 37, guessType: 27, payback: 8229101485732253752, claimed: 0
+
+
+player: 0xDCfB2fFb05c07f371306A9F1B6760F377D9eeaaa
+matchId: 36, guessType: 29, payback: 1256001032435687859, claimed: 0
+
+
+player: 0x91786A86701c64a9A58b6100A585AE6faF48268b
+matchId: 33, guessType: 27, payback: 1478057700121901665, claimed: 0
+
+
+player: 0xFd8A563fE2f462341D8bBEEB9AADD7251C342b31
+matchId: 33, guessType: 27, payback: 1478057700121901665, claimed: 0
+
+
+player: 0x37A492A2c9B8aA83441D23b919057117a938E3E5
+matchId: 33, guessType: 27, payback: 1478057700121901665, claimed: 0
+
+
+player: 0xdb064D68c8Ad6FB24C863306D9897b3413D5214d
+matchId: 33, guessType: 27, payback: 1478057700121901665, claimed: 0
+
+
+player: 0xFAA677A7093C1D2466c3Eccb5D5898fD115179a6
+matchId: 31, guessType: 27, payback: 3325714285714285712, claimed: 0
+
+
+player: 0x1A246E644D3951f4D8A83c21c478c964873fA813
+matchId: 25, guessType: 29, payback: 2733636363636363635, claimed: 0
+
+
+player: 0x0AE61326298e376daC6fAf745a700e594Ee9EB48
+matchId: 12, guessType: 27, payback: 15397279354838709672, claimed: 0
+
+
+player: 0x1cA31B8cFed64f708005389078192921C74E514b
+matchId: 9, guessType: 28, payback: 9865921052631578946, claimed: 0
+
+
+player: 0xF500ecC6178Da106d2A0181aF19a826F7F9A0f83
+matchId: 8, guessType: 27, payback: 23603333333333333328, claimed: 0
+
+
+player: 0xF07b96A3d898b288B2A86EE35F48e07d745Cf6df
+matchId: 3, guessType: 29, payback: 20851626471161547241, claimed: 0
+
+
+player: 0x97F821C8016536A210B8a7dBaa4Cb603E61577FB
+matchId: 1, guessType: 29, payback: 3739034937801408341, claimed: 0
